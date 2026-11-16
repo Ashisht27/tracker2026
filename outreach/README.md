@@ -19,7 +19,7 @@ Ask Claude to "sync the WhatsApp outreach queue with GitHub". Claude then:
 
 ## Editing here
 
-- **Add a lead:** append an object to `leads.json` with a unique `id` and the same fields as the others. `m` is `IN` or `US`; `s` is `no_website`, `old_website`, `dead_website` or `fine_website`. Leave `doc` and `bl` empty if there is no PDF yet.
+- **Add a lead:** append an object to `leads.json` with a unique `id` and the same fields as the others. `m` is `IN` or `US`; `s` is `no_website`, `old_website`, `dead_website` or `fine_website`. `t` is the business type (`clinic`, `coaching`, `spa`, `real_estate`, `fitness`, `other`) and `ch` is `1` for chains or franchises. Leave `doc` and `bl` empty if there is no PDF yet.
 - **Change a status:** set `state` to one of `sent`, `replied`, `pdf_sent`, `declined` (not interested), `stop`, `skip`, and set `at` to the current time in ISO format (for example `2026-11-16T10:30:00Z`). If `at` is older than the page's change, the page wins.
 - **Reset a lead to "To send":** remove it from `status.json` *and* clear it on the page. Removing it here alone won't do it, because the page's entry still exists.
 
