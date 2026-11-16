@@ -16,7 +16,7 @@ page doesn't, or when lead details changed.
 import argparse, json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STATES = {"sent", "replied", "pdf_sent", "not_interested", "stop", "skip"}
+STATES = {"sent", "replied", "pdf_sent", "declined", "stop", "skip"}
 
 
 def load(path, default):
